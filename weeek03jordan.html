@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Jordan & Nike Air Jordan Campaign</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #001f3f 0%, #0074D9 25%, #7FDBFF 50%, #39CCCC 75%, #001f3f 100%);
+            background-attachment: fixed;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid #39CCCC;
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #39CCCC;
+            text-shadow: 0 0 15px rgba(57, 204, 204, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nike-swoosh {
+            font-size: 28px;
+            color: #FFFFFF;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #39CCCC;
+            text-shadow: 0 0 8px rgba(57, 204, 204, 0.8);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(45deg, rgba(0,31,63,0.8), rgba(57,204,204,0.3));
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="basketball" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="8" fill="none" stroke="rgba(57,204,204,0.1)" stroke-width="1"/><path d="M 2 10 L 18 10 M 10 2 L 10 18" stroke="rgba(57,204,204,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23basketball)"/></svg>') repeat;
+            animation: courtMove 25s linear infinite;
+        }
+
+        @keyframes courtMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(20px, 20px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #39CCCC, #FFFFFF, #0074D9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: championGlow 3s ease-in-out infinite alternate;
+            font-weight: 900;
+        }
+
+        @keyframes championGlow {
+            from { filter: drop-shadow(0 0 8px rgba(57, 204, 204, 0.6)); }
+            to { filter: drop-shadow(0 0 25px rgba(57, 204, 204, 0.9)); }
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 35px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #39CCCC, #0074D9);
+            color: #FFFFFF;
+            padding: 18px 35px;
+            text-decoration: none;
+            border-radius: 35px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 6px 20px rgba(57, 204, 204, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(57, 204, 204, 0.7);
+            background: linear-gradient(45deg, #0074D9, #39CCCC);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 90px 0;
+            margin-top: 100px;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #39CCCC;
+            text-shadow: 0 0 15px rgba(57, 204, 204, 0.4);
+            font-weight: 800;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 35px;
+            margin-bottom: 60px;
+        }
+
+        .analysis-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 35px;
+            border: 2px solid rgba(57, 204, 204, 0.3);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .analysis-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #39CCCC, transparent);
+            transition: left 0.6s ease;
+        }
+
+        .analysis-card:hover::before {
+            left: 100%;
+        }
+
+        .analysis-card:hover {
+            transform: translateY(-12px);
+            border-color: #39CCCC;
+            box-shadow: 0 15px 40px rgba(57, 204, 204, 0.25);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .analysis-card h3 {
+            color: #39CCCC;
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 391px;
+            height: 695px;
+            margin: 50px auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+            border: 3px solid #39CCCC;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 60px;
+        }
+
+        .value-card {
+            background: linear-gradient(135deg, rgba(57, 204, 204, 0.12), rgba(0, 31, 63, 0.4));
+            border-radius: 20px;
+            padding: 35px;
+            border-left: 5px solid #39CCCC;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .value-card:hover {
+            background: linear-gradient(135deg, rgba(57, 204, 204, 0.18), rgba(0, 31, 63, 0.5));
+            transform: translateX(15px);
+            box-shadow: 0 10px 30px rgba(57, 204, 204, 0.2);
+        }
+
+        .value-card h4 {
+            color: #39CCCC;
+            font-size: 1.4rem;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+
+        .highlight {
+            background: linear-gradient(45deg, rgba(57, 204, 204, 0.25), rgba(0, 116, 217, 0.15));
+            padding: 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 5px solid #39CCCC;
+            border-right: 5px solid #0074D9;
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.95);
+            text-align: center;
+            padding: 50px 0;
+            margin-top: 120px;
+            border-top: 3px solid #39CCCC;
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #39CCCC, #0074D9);
+            z-index: 1001;
+            transition: width 0.3s ease;
+        }
+
+        .floating-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #39CCCC;
+            border-radius: 50%;
+            animation: float 18s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                opacity: 0;
+                transform: translateY(100vh) translateX(0) rotate(0deg);
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-10vh) translateX(150px) rotate(360deg);
+            }
+        }
+
+        .comparison-section {
+            background: rgba(57, 204, 204, 0.08);
+            border-radius: 20px;
+            padding: 50px;
+            margin: 50px 0;
+            border: 2px solid rgba(57, 204, 204, 0.3);
+        }
+
+        .nba-badge {
+            display: inline-block;
+            background: #0074D9;
+            color: #FFFFFF;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section {
+                padding: 70px 0;
+                margin-top: 90px;
+            }
+
+            .video-container {
+                max-width: 100%;
+                height: 500px;
+            }
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-indicator" id="scroll-indicator"></div>
+    <div class="floating-particles" id="particles"></div>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <span class="nike-swoosh">✓</span>
+                MJ × Nike Analysis
+            </div>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#analysis">Analysis</a></li>
+                <li><a href="#value">Value</a></li>
+                <li><a href="#strategy">Strategy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>🏀 Michael Jordan & Nike Air Jordan</h1>
+            <p>The Ultimate "Selling Without Selling" Legacy</p>
+            <a href="#overview" class="cta-button">Explore The Strategy</a>
+        </div>
+    </section>
+
+    <section id="overview" class="section">
+        <div class="container">
+            <h2 class="section-title">📋 Assignment Response</h2>
+            
+            <div class="highlight" style="margin-bottom: 50px; background: linear-gradient(135deg, rgba(255, 107, 53, 0.3), rgba(0, 0, 0, 0.4)); border: 3px solid #FF6B35;">
+                <h4 style="color: #39CCCC; font-size: 1.5rem; margin-bottom: 25px; font-weight: 700;">🎯 QUESTION 1: Share an example of a brand post that demonstrates selling without selling</h4>
+                <p style="font-size: 1.2rem;"><strong>Selected Example:</strong> Michael Jordan's documentary content and behind-the-scenes lifestyle footage in collaboration with Nike, particularly content that showcases his legendary work ethic, competitive mindset, and the philosophy that made him the greatest basketball player of all time - without directly promoting Air Jordan products.</p>
+            </div>
+            
+            <div class="video-container">
+                <iframe width="391" height="695" src="https://www.youtube.com/embed/9nci78sL2WE" title="kittysweek03discusion" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <p style="text-align: center; font-size: 1.3rem; max-width: 900px; margin: 40px auto 0; line-height: 1.7;">
+                This partnership represents over 40 years of collaboration that transformed athletic endorsement forever, 
+                creating a cultural phenomenon that transcends basketball and inspires excellence across all fields.
+            </p>
+        </div>
+    </section>
+
+    <section id="analysis" class="section">
+        <div class="container">
+            <div class="highlight" style="margin-bottom: 50px; background: linear-gradient(135deg, rgba(57, 204, 204, 0.3), rgba(0, 31, 63, 0.4)); border: 3px solid #39CCCC;">
+                <h4 style="color: #39CCCC; font-size: 1.5rem; margin-bottom: 25px; font-weight: 700;">🎯 QUESTION 2: Why is this post an example of selling without selling?</h4>
+            </div>
+            
+            <h2 class="section-title">Strategic Analysis: "Selling Without Selling"</h2>
+            
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <h3>🚫 Zero Product Promotion</h3>
+                    <p>Instead of showcasing Air Jordan shoes or apparel, the content focuses on Jordan's mindset, his relentless pursuit of perfection, and the mental framework that separated him from every other competitor. No prices, no features, no "buy now" calls to action.</p>
+                </div>
+                
+                <div class="analysis-card">
+                    <h3>🧠 Mindset-Focused Content</h3>
+                    <p>The content centers on Jordan's legendary competitive drive, his famous "taking it personally" mentality, and the psychological warfare he used against opponents. It's pure inspiration and motivation.</p>
+                </div>
+                
+                <div class="analysis-card">
+                    <h3>🎬 Authentic Storytelling</h3>
+                    <p>Raw, unfiltered stories about Jordan's career, his failures, his comebacks, and his obsession with winning. These aren't manufactured marketing stories - they're real moments that shaped a legend.</p>
+                </div>
+                
+                <div class="analysis-card">
+                    <h3>🏆 Legacy Documentation</h3>
+                    <p>Content positions Jordan not as a product endorser, but as the ultimate example of what happens when talent meets obsessive work ethic and an unbreakable will to win.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="value" class="section">
+        <div class="container">
+            <div class="highlight" style="margin-bottom: 50px; background: linear-gradient(135deg, rgba(57, 204, 204, 0.3), rgba(0, 31, 63, 0.4)); border: 3px solid #39CCCC;">
+                <h4 style="color: #39CCCC; font-size: 1.5rem; margin-bottom: 25px; font-weight: 700;">🎯 QUESTION 3: What value is the brand offering without directly promoting a product or service?</h4>
+            </div>
+            
+            <h2 class="section-title">💎 Value Analysis: Beyond Product Promotion</h2>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h4>🔥 Motivational Value</h4>
+                    <p><strong>Championship Mindset:</strong> Provides the mental blueprint for excellence in any field, not just basketball.</p>
+                    <ul style="margin-top: 18px; padding-left: 25px;">
+                        <li>Overcoming failure and rejection</li>
+                        <li>The power of obsessive preparation</li>
+                        <li>Turning criticism into motivation</li>
+                        <li>Never settling for "good enough"</li>
+                        <li>Mental toughness development</li>
+                    </ul>
+                </div>
+                
+                <div class="value-card">
+                    <h4>📚 Educational Value</h4>
+                    <p><strong>Masterclass in Excellence:</strong> Behind-the-scenes insights into what separates champions from everyone else.</p>
+                    <ul style="margin-top: 18px; padding-left: 25px;">
+                        <li>Work ethic that defies logic</li>
+                        <li>Attention to detail obsession</li>
+                        <li>Psychological preparation techniques</li>
+                        <li>Leadership under pressure</li>
+                        <li>Continuous improvement philosophy</li>
+                    </ul>
+                </div>
+                
+                <div class="value-card">
+                    <h4>✨ Inspirational Value</h4>
+                    <p><strong>Cultural Icon Access:</strong> Exclusive glimpses into the mind and methods of arguably the most competitive person who ever lived.</p>
+                    <ul style="margin-top: 18px; padding-left: 25px;">
+                        <li>Rare vulnerability moments</li>
+                        <li>Personal sacrifice stories</li>
+                        <li>Championship journey insights</li>
+                        <li>Overcoming impossible odds</li>
+                        <li>Creating legendary moments</li>
+                    </ul>
+                </div>
+                
+                <div class="value-card">
+                    <h4>❤️ Emotional Value</h4>
+                    <p><strong>Community of Champions:</strong> Connects viewers with the universal desire to be great and provides belonging among those who refuse to settle.</p>
+                    <ul style="margin-top: 18px; padding-left: 25px;">
+                        <li>Shared excellence aspirations</li>
+                        <li>Competitive spirit recognition</li>
+                        <li>Greatness culture participation</li>
+                        <li>Legacy-building motivation</li>
+                        <li>"Be Like Mike" identity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="strategy" class="section">
+        <div class="container">
+            <div class="highlight" style="margin-bottom: 50px; background: linear-gradient(135deg, rgba(57, 204, 204, 0.3), rgba(0, 31, 63, 0.4)); border: 3px solid #39CCCC;">
+                <h4 style="color: #39CCCC; font-size: 1.5rem; margin-bottom: 25px; font-weight: 700;">🎯 QUESTION 4: How does this strategy build trust and long-term relationships with the audience?</h4>
+            </div>
+            
+            <h2 class="section-title">🤝 Trust-Building & Relationship Strategy</h2>
+            
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <h3>🏆 Proven Results Legacy</h3>
+                    <p>Jordan's 6 <span class="nba-badge">NBA</span> championships, 5 MVPs, and cultural impact provide undeniable proof that his methods work. His success validates every principle he shares, creating instant credibility.</p>
+                </div>
+                
+                <div class="analysis-card">
+                    <h3>🎯 Authentic Vulnerability</h3>
+                    <p>Jordan shares his failures, doubts, and struggles openly. This authenticity creates deep connection - he's not just a perfect athlete, he's a human who overcame everything through sheer will.</p>
+                </div>
+                
+                <div class="analysis-card">
+                    <h3>🔄 Consistent Message</h3>
+                    <p>For 40+ years, Jordan's message has never changed: excellence requires sacrifice, obsession with improvement, and refusing to accept defeat. This consistency builds unshakeable trust.</p>
+                </div>
+                
+                <div class="analysis-card">
+                    <h3>🌟 Aspirational Community</h3>
+                    <p>Followers don't just buy products - they join a mindset, a culture of excellence. The Jordan brand represents a way of thinking and living that transcends basketball.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="conversion" class="section">
+        <div class="container">
+            <div class="highlight" style="margin-bottom: 50px; background: linear-gradient(135deg, rgba(57, 204, 204, 0.3), rgba(0, 31, 63, 0.4)); border: 3px solid #39CCCC;">
+                <h4 style="color: #39CCCC; font-size: 1.5rem; margin-bottom: 25px; font-weight: 700;">🎯 QUESTION 5: How might the brand eventually lead to a sale without losing authenticity?</h4>
+            </div>
+            
+            <h2 class="section-title">🎪 Authentic Conversion Strategy</h2>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <h4>👟 Product as Tool for Greatness</h4>
+                    <p><strong>Performance Enhancement:</strong> Present Air Jordans as instruments that help you perform like a champion.</p>
+                    <ul style="margin-top: 18px; padding-left: 25px;">
+                        <li>Game-changing technology stories</li>
+                        <li>Performance advantage documentation</li>
+                        <li>"Tools of champions" positioning</li>
+                        <li>Innovation that matches mindset</li>
+                        <li>Professional athlete endorsements</li>
+                    </ul>
+                </div>
+                
+                <div class="value-card">
+                    <h4>🏆 Limited Edition Legacy</h4>
+                    <p><strong>Exclusive Access:</strong> Create special releases tied to specific moments in Jordan's career or philosophy.</p>
+                    <ul style="margin-top: 18px; padding-left: 25px;">
+                        <li>Championship moment commemorations</li>
+                        <li>Signature colorway stories</li>
+                        <li>Exclusive member-only releases</li>
+                        <li>Documentary tie-in editions</li>
+                        <li>Personal milestone celebrations</li>
+                    </ul>
+                </div>
+                
+                <div class="value-card">
+                    <h4>🎯 Community-Driven Calls to Action</h4>
+                    <p><strong>Join the Movement:</strong> Invite people to be part of the excellence culture rather than just buy products.</p>
+                    <ul style="margin-top: 18px; padding-left: 25px;">
+                        <li>"Earn your wings" challenges</li>
+                        <li>Training program access</li>
+                        <li>Excellence community membership</li>
+                        <li>Champion mindset workshops</li>
+                        <li>Legacy-building initiatives</li>
+                    </ul>
+                </div>
+                
+                <div class="value-card">
+                    <h4>🔥 Subtle Product Integration</h4>
+                    <p><strong>Natural Placement:</strong> Show Jordan wearing his signature shoes during iconic moments without making it about the shoes.</p>
+                    <ul style="margin-top: 18px; padding-left: 25px;">
+                        <li>Behind-the-scenes training footage</li>
+                        <li>Pre-game ritual documentation</li>
+                        <li>Championship celebration moments</li>
+                        <li>Practice session glimpses</li>
+                        <li>Casual lifestyle integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="comparison-section">
+                <h2 class="section-title">🚀 Strategic Impact Analysis</h2>
+                
+                <div class="highlight" style="background: linear-gradient(135deg, rgba(57, 204, 204, 0.2), rgba(0, 31, 63, 0.4)); padding: 35px; margin-bottom: 50px;">
+                    <h4 style="color: #39CCCC; margin-bottom: 25px; font-size: 1.4rem;">💡 Final Strategic Reflection</h4>
+                    <p style="font-size: 1.3rem; line-height: 1.8;">
+                        The Jordan-Nike partnership revolutionized athletic marketing because it understood a fundamental truth: people don't buy products, they buy <strong>identity</strong>. Jordan doesn't sell shoes; he sells the possibility of greatness. This approach created the most successful athletic brand in history by making every purchase feel like a step toward becoming the person you want to be.
+                    </p>
+                </div>
+
+                <div class="analysis-grid">
+                    <div class="analysis-card">
+                        <h3>🎯 Key Success Factors</h3>
+                        <ul style="margin-top: 18px; padding-left: 25px;">
+                            <li><strong>Authenticity:</strong> 40+ year genuine partnership</li>
+                            <li><strong>Results:</strong> Undeniable championship legacy</li>
+                            <li><strong>Consistency:</strong> Never wavered from excellence message</li>
+                            <li><strong>Aspiration:</strong> Sells dreams, not just products</li>
+                            <li><strong>Culture:</strong> Created a lifestyle movement</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="analysis-card">
+                        <h3>📈 Measurable Outcomes</h3>
+                        <ul style="margin-top: 18px; padding-left: 25px;">
+                            <li><strong>Brand Loyalty:</strong> Multi-generational following</li>
+                            <li><strong>Premium Pricing:</strong> $3B+ annual revenue</li>
+                            <li><strong>Cultural Impact:</strong> Global influence beyond sports</li>
+                            <li><strong>Market Dominance:</strong> Leading basketball brand globally</li>
+                            <li><strong>Legacy Value:</strong> Continues growing post-retirement</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="highlight" style="margin-top: 50px;">
+                    <h4 style="color: #39CCCC; font-size: 1.3rem; margin-bottom: 20px;">🔥 Academic Application:</h4>
+                    <p style="font-size: 1.1rem; line-height: 1.7;">This case study demonstrates how brands can transcend product categories by selling identity and aspiration. The emotional investment created through authentic storytelling and consistent messaging transforms customers into brand evangelists who see purchases as investments in their personal excellence journey, not just transactions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p style="font-size: 1.1rem;">&copy; 2025 Marketing Strategy Analysis | Michael Jordan × Nike Case Study</p>
+            <p style="margin-top: 15px; opacity: 0.8;">Expert Analysis in Consumer Behavior & Brand Strategy</p>
+            <div style="margin-top: 20px;">
+                <span class="nike-swoosh" style="font-size: 24px; color: #39CCCC;">✓</span>
+                <span style="margin-left: 10px; color: #39CCCC; font-weight: 600;">Just Do It</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll indicator
+        window.addEventListener('scroll', () => {
+            const scrolled = (window.scrollY /
