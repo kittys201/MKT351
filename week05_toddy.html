@@ -163,13 +163,6 @@
             letter-spacing: 3px;
         }
 
-        .campaign-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-
         .campaign-card {
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(20px);
@@ -178,6 +171,8 @@
             border: 3px solid #ffcc00;
             transition: all 0.5s ease;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
+            margin: 0 auto 60px;
         }
 
         .campaign-card:hover {
@@ -306,16 +301,6 @@
             color: #fff;
         }
 
-        @media (max-width: 1024px) {
-            .campaign-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-        }
-
         @media (max-width: 768px) {
             .section-title {
                 font-size: 2rem;
@@ -332,7 +317,7 @@
         <nav class="nav">
             <div class="logo">☕ Toddy Marketing Analysis</div>
             <ul class="nav-links">
-                <li><a href="#campaigns">Campaigns</a></li>
+                <li><a href="#campaign">Campaign</a></li>
                 <li><a href="#analysis">Analysis</a></li>
                 <li><a href="#conclusions">Conclusions</a></li>
             </ul>
@@ -343,53 +328,39 @@
         <div class="hero-content">
             <h1>☕ TODDY</h1>
             <p>Building Family Connections Through Generations</p>
-            <a href="#campaigns" class="cta-button">Explore Analysis</a>
+            <a href="#campaign" class="cta-button">Explore Analysis</a>
         </div>
     </section>
 
-    <section id="campaigns" class="section">
+    <section id="campaign" class="section">
         <div class="container">
-            <h2 class="section-title">Featured Campaign Examples</h2>
+            <h2 class="section-title">Featured Campaign Example</h2>
             
-            <div class="campaign-grid">
-                <div class="campaign-card">
-                    <h3>Christmas Campaign 2000</h3>
-                    <p><strong>Campaign Type:</strong> Holiday Family Connection</p>
-                    <p><strong>Format:</strong> Three Christmas advertisements focusing on family traditions</p>
-                    
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/8U-S7Gf6dhc" title="Toddy Christmas 2000" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    
-                    <div class="highlight-box">
-                        <h5>Key Campaign Elements:</h5>
-                        <ul class="key-points">
-                            <li>Holiday family gathering moments</li>
-                            <li>Nostalgic Venezuelan traditions</li>
-                            <li>Toddy as part of celebration rituals</li>
-                            <li>Multi-generational connection</li>
-                        </ul>
-                    </div>
+            <div class="campaign-card">
+                <h3>"Grandma" Campaign 1994</h3>
+                <p><strong>Campaign Type:</strong> Iconic Family Moment</p>
+                <p><strong>Format:</strong> Humorous grandmother-grandson dialogue showcasing intergenerational connection</p>
+                
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/hv8mjXCQcmM" title="Toddy Grandma 1994" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+                <div class="highlight-box">
+                    <h5>Cultural Impact:</h5>
+                    <ul class="key-points">
+                        <li>Created an iconic Venezuelan phrase that entered popular culture</li>
+                        <li>Established humor-based emotional connection with audiences</li>
+                        <li>Focused on intergenerational relationships and family bonding</li>
+                        <li>Demonstrated Toddy as part of everyday family rituals</li>
+                        <li>Made the grandmother-preparing-Toddy moment universally relatable</li>
+                    </ul>
                 </div>
 
-                <div class="campaign-card">
-                    <h3>"Grandma" Campaign 1994</h3>
-                    <p><strong>Campaign Type:</strong> Iconic Family Moment</p>
-                    <p><strong>Format:</strong> Humorous grandmother-grandson dialogue</p>
+                <div class="answer-content" style="margin-top: 30px;">
+                    <h5>Campaign Context:</h5>
+                    <p>This 1994 advertisement became famous for its endearing and humorous dialogue between a grandmother and her grandson, centered on the preparation of Toddy. The campaign successfully highlighted Toddy's role in everyday family moments, reinforcing the emotional connection with the product through authentic, relatable interactions.</p>
                     
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/hv8mjXCQcmM" title="Toddy Grandma 1994" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    
-                    <div class="highlight-box">
-                        <h5>Cultural Impact:</h5>
-                        <ul class="key-points">
-                            <li>Created iconic Venezuelan phrase</li>
-                            <li>Humor-based emotional connection</li>
-                            <li>Intergenerational relationship focus</li>
-                            <li>Became part of popular culture</li>
-                        </ul>
-                    </div>
+                    <p style="margin-top: 15px;"><strong>Long-term Strategy:</strong> Throughout the years, Toddy's advertising in Venezuela has maintained a consistent approach, combining nostalgia with messages that emphasize taste and quality attributes, while always positioning family connection at the core of the brand experience.</p>
                 </div>
             </div>
         </div>
@@ -401,11 +372,11 @@
             
             <div class="analysis-section">
                 <div class="question-block">
-                    <h4>1. What is the main message or goal of these campaigns?</h4>
+                    <h4>1. What is the main message or goal of this campaign?</h4>
                     
                     <div class="answer-content">
                         <h5>Primary Message:</h5>
-                        <p>Toddy's campaigns communicate that the brand is more than a chocolate drink—it's a <strong>catalyst for family moments and intergenerational bonding</strong>. The main goal is to position Toddy as an essential element of Venezuelan family life, present in both everyday moments and special celebrations.</p>
+                        <p>Toddy's campaign communicates that the brand is more than a chocolate drink—it's a <strong>catalyst for family moments and intergenerational bonding</strong>. The main goal is to position Toddy as an essential element of Venezuelan family life, present in everyday moments that become cherished memories.</p>
                         
                         <h5 style="margin-top: 20px;">Strategic Goals:</h5>
                         <ul class="key-points">
@@ -413,6 +384,7 @@
                             <li><strong>Cultural Integration:</strong> Establish Toddy as part of Venezuelan cultural identity</li>
                             <li><strong>Generational Legacy:</strong> Show how Toddy connects grandparents, parents, and children</li>
                             <li><strong>Everyday Ritual:</strong> Position Toddy as part of daily family routines</li>
+                            <li><strong>Brand Love:</strong> Create emotional attachment that transcends product attributes</li>
                         </ul>
                     </div>
                 </div>
@@ -426,16 +398,18 @@
                         <p><strong>Creates Behavioral Triggers:</strong></p>
                         <ul class="key-points">
                             <li>The grandmother preparing Toddy becomes a model behavior that viewers want to replicate in their own homes</li>
-                            <li>The Christmas campaigns inspire families to incorporate Toddy into their holiday traditions</li>
                             <li>The humorous dialogue makes sharing Toddy moments a social activity families want to recreate</li>
+                            <li>The authentic family interaction inspires viewers to create similar bonding experiences</li>
+                            <li>The relatability makes audiences see Toddy preparation as an act of love and care</li>
                         </ul>
                         
                         <p style="margin-top: 20px;"><strong>Actionable Outcomes:</strong></p>
                         <ul class="key-points">
                             <li><strong>Purchase Motivation:</strong> Viewers feel compelled to buy Toddy to create similar family moments</li>
                             <li><strong>Ritual Creation:</strong> Inspires families to establish Toddy-drinking as a daily tradition</li>
-                            <li><strong>Social Sharing:</strong> Memorable phrases and moments become conversation starters</li>
-                            <li><strong>Generational Transmission:</strong> Parents teach children the "Toddy tradition," ensuring continued consumption</li>
+                            <li><strong>Social Sharing:</strong> Memorable phrases and moments become conversation starters that keep the brand top-of-mind</li>
+                            <li><strong>Generational Transmission:</strong> Parents teach children the "Toddy tradition," ensuring continued consumption across generations</li>
+                            <li><strong>Emotional Investment:</strong> Consumers become brand advocates who defend and promote Toddy as part of their family identity</li>
                         </ul>
                     </div>
                 </div>
@@ -448,20 +422,21 @@
                         
                         <div class="highlight-box" style="margin-top: 20px;">
                             <h5>Family First Philosophy</h5>
-                            <p>Toddy consistently prioritizes family connections over product features. The campaigns never focus on taste or nutrition alone—they emphasize the <strong>emotional experience</strong> of sharing Toddy together.</p>
+                            <p>Toddy consistently prioritizes family connections over product features. The campaign never focuses on taste or nutrition alone—it emphasizes the <strong>emotional experience</strong> of sharing Toddy together and the relationships that form around this simple daily ritual.</p>
                         </div>
                         
                         <ul class="key-points">
-                            <li><strong>Nurturing & Care:</strong> Toddy represents the love grandmothers and mothers show through preparation</li>
+                            <li><strong>Nurturing & Care:</strong> Toddy represents the love grandmothers and mothers show through preparation and sharing</li>
                             <li><strong>Cultural Preservation:</strong> The brand values Venezuelan traditions and intergenerational storytelling</li>
-                            <li><strong>Authenticity:</strong> Uses real, relatable family moments rather than artificial scenarios</li>
-                            <li><strong>Longevity:</strong> Demonstrates commitment to being present across generations</li>
-                            <li><strong>Joy & Humor:</strong> Shows that family moments should be lighthearted and fun</li>
+                            <li><strong>Authenticity:</strong> Uses real, relatable family moments rather than artificial or aspirational scenarios</li>
+                            <li><strong>Longevity:</strong> Demonstrates commitment to being present across generations, not just one-time purchases</li>
+                            <li><strong>Joy & Humor:</strong> Shows that family moments should be lighthearted, fun, and filled with warmth</li>
+                            <li><strong>Accessibility:</strong> Positions Toddy as available to all families, regardless of socioeconomic status</li>
                         </ul>
                         
                         <h5 style="margin-top: 25px;">Brand Mission Statement (Implied):</h5>
                         <p style="font-style: italic; padding: 20px; background: rgba(255, 204, 0, 0.1); border-radius: 10px;">
-                            "To nourish Venezuelan families with flavor that brings generations together, creating moments of connection, love, and joy that become cherished memories."
+                            "To nourish Venezuelan families with flavor that brings generations together, creating moments of connection, love, and joy that become cherished memories passed down through time."
                         </p>
                     </div>
                 </div>
@@ -475,33 +450,36 @@
                         <p><strong>Emotional Value Creation:</strong></p>
                         <ul class="key-points">
                             <li><strong>Shared Identity:</strong> Creates a sense of belonging among Venezuelan families who grew up with Toddy</li>
-                            <li><strong>Nostalgic Bonding:</strong> Adults share "I remember that commercial!" moments, strengthening community connections</li>
-                            <li><strong>Generational Bridge:</strong> Gives grandparents, parents, and children a common reference point</li>
-                            <li><strong>Cultural Currency:</strong> The iconic phrases become part of national dialogue</li>
+                            <li><strong>Nostalgic Bonding:</strong> Adults share "I remember that commercial!" moments, strengthening community connections beyond the product itself</li>
+                            <li><strong>Generational Bridge:</strong> Gives grandparents, parents, and children a common reference point for connection</li>
+                            <li><strong>Cultural Currency:</strong> The iconic phrases become part of national dialogue, making the brand culturally relevant</li>
+                            <li><strong>Collective Memory:</strong> The campaign becomes part of Venezuela's advertising heritage, creating shared experiences</li>
                         </ul>
                         
                         <p style="margin-top: 20px;"><strong>Value Beyond the Product:</strong></p>
                         <ul class="key-points">
-                            <li><strong>Memory Creation:</strong> Toddy isn't selling chocolate—it's selling the experience of family warmth</li>
-                            <li><strong>Tradition Building:</strong> Offers a way for families to establish meaningful rituals</li>
-                            <li><strong>Emotional Support:</strong> In difficult times, Toddy becomes a comforting constant</li>
-                            <li><strong>Social Proof:</strong> Shows that loving families drink Toddy together</li>
+                            <li><strong>Memory Creation:</strong> Toddy isn't selling chocolate—it's selling the experience of family warmth and connection</li>
+                            <li><strong>Tradition Building:</strong> Offers a way for families to establish meaningful rituals that provide structure and comfort</li>
+                            <li><strong>Emotional Support:</strong> In difficult times, Toddy becomes a comforting constant that represents stability</li>
+                            <li><strong>Social Proof:</strong> Shows that loving, caring families drink Toddy together, creating aspirational modeling</li>
+                            <li><strong>Entertainment Value:</strong> The campaign is genuinely enjoyable to watch, providing entertainment alongside brand messaging</li>
                         </ul>
                         
                         <div class="highlight-box" style="margin-top: 30px;">
                             <h5>The True Marketing Purpose Demonstrated:</h5>
                             <p style="line-height: 1.8;">
-                                Toddy's campaigns exemplify marketing at its best: <strong>creating genuine value that extends far beyond the transaction</strong>. Rather than simply convincing people to buy chocolate powder, Toddy has:
+                                Toddy's campaign exemplifies marketing at its best: <strong>creating genuine value that extends far beyond the transaction</strong>. Rather than simply convincing people to buy chocolate powder, Toddy has:
                             </p>
                             <ul class="key-points" style="margin-top: 15px;">
-                                <li>Built a multi-generational emotional bond with Venezuelan families</li>
+                                <li>Built a multi-generational emotional bond with Venezuelan families that transcends the product</li>
                                 <li>Become interwoven with cultural identity and national nostalgia</li>
                                 <li>Provided a framework for families to express love through shared rituals</li>
-                                <li>Created content that people genuinely want to watch and share</li>
-                                <li>Established trust by consistently reflecting authentic family values</li>
+                                <li>Created content that people genuinely want to watch, share, and remember</li>
+                                <li>Established trust by consistently reflecting authentic family values over decades</li>
+                                <li>Demonstrated that marketing can add to cultural heritage rather than just interrupt it</li>
                             </ul>
                             <p style="margin-top: 20px; font-weight: bold;">
-                                This is marketing as <em>value creation</em> and <em>relationship building</em>—not manipulation or mere communication.
+                                This is marketing as <em>value creation</em> and <em>relationship building</em>—not manipulation or mere communication. It shows that the purpose of marketing should be to enrich people's lives and strengthen communities.
                             </p>
                         </div>
                     </div>
@@ -520,16 +498,19 @@
                     
                     <div class="answer-content">
                         <h5>1. Emotional Investment Over Product Features</h5>
-                        <p>Toddy never leads with "best taste" or "most nutritious." Instead, they invest in emotional storytelling that makes the product irreplaceable in consumers' hearts.</p>
+                        <p>Toddy never leads with "best taste" or "most nutritious." Instead, they invest in emotional storytelling that makes the product irreplaceable in consumers' hearts. The focus is always on what the product enables—connection, love, tradition—rather than what the product contains.</p>
                         
                         <h5 style="margin-top: 25px;">2. Long-Term Relationship Building</h5>
-                        <p>By focusing on generational connections, Toddy ensures customer loyalty that spans decades—children who grew up with Toddy buy it for their own children.</p>
+                        <p>By focusing on generational connections, Toddy ensures customer loyalty that spans decades. Children who grew up watching grandmothers prepare Toddy buy it for their own children, creating a self-perpetuating cycle of brand loyalty based on emotional attachment rather than rational product comparison.</p>
                         
                         <h5 style="margin-top: 25px;">3. Cultural Integration Strategy</h5>
-                        <p>The brand becomes part of national identity, making it nearly impossible for competitors to displace because they're competing against memories and traditions.</p>
+                        <p>The brand becomes part of national identity, making it nearly impossible for competitors to displace because they're competing against memories, traditions, and cultural touchstones—not just taste or price. This creates an almost impenetrable competitive moat.</p>
                         
                         <h5 style="margin-top: 25px;">4. Marketing as Value Addition</h5>
-                        <p>These campaigns don't interrupt—they entertain, move, and become part of the cultural conversation. People want to watch and share them.</p>
+                        <p>These campaigns don't interrupt—they entertain, move, and become part of the cultural conversation. People want to watch and share them, making the marketing itself a product that adds value to consumers' lives. The advertising becomes content worth consuming.</p>
+                        
+                        <h5 style="margin-top: 25px;">5. Authenticity Creates Trust</h5>
+                        <p>By showing real, relatable family dynamics rather than idealized perfection, Toddy builds trust and credibility. Families see themselves reflected in the advertising, which makes the emotional connection feel genuine rather than manufactured.</p>
                     </div>
                     
                     <div class="highlight-box" style="margin-top: 30px; border-color: #ff9900;">
@@ -538,7 +519,10 @@
                             Toddy demonstrates that <strong>the purpose of marketing transcends sales</strong>. It's about creating genuine value, building lasting connections, and becoming a positive force in people's lives. When marketing serves families by helping them create cherished moments together, commercial success becomes a natural byproduct of human connection.
                         </p>
                         <p style="margin-top: 15px; font-style: italic;">
-                            This is marketing that doesn't feel like marketing—it feels like a celebration of what matters most: family, love, and shared traditions.
+                            This is marketing that doesn't feel like marketing—it feels like a celebration of what matters most: family, love, and shared traditions. It shows that brands can be forces for good in society when they prioritize human connections over short-term transactions.
+                        </p>
+                        <p style="margin-top: 15px; font-weight: bold;">
+                            The lesson: Marketing should ask not "How can we sell more?" but "How can we add meaningful value to people's lives?" When you answer the second question well, the first takes care of itself.
                         </p>
                     </div>
                 </div>
